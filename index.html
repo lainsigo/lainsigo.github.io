@@ -1,1 +1,680 @@
-今天日期是115/11/15
+<!-- 檔名：index.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Search Console 驗證標記：請在申請完成後，將您的 <meta name="google-site-verification" content="..." /> 貼在此註解下方 -->
+  <!-- <meta name="google-site-verification" content="請貼上您自己的驗證碼" /> -->
+
+  <!-- SEO 基本設定（依據資料表第 6 部分） -->
+  <title>生活顧問｜BM（陳聯鎂）</title>
+  <meta name="description" content="BM（陳聯鎂）個人網站 - 專業生活顧問與生活諮詢師，擁有逾25年護理師、護理長與專科護理師臨床資歷，結合長照與生命關懷專業，提供有溫度的生活諮詢服務。" />
+  <meta name="keywords" content="生活顧問, 生活諮詢, 心靈導引, 護理專業, 長照關懷, BM, 陳聯鎂" />
+  <meta name="author" content="BM（陳聯鎂）" />
+
+  <!-- 網址與社群分享標籤（發布到 GitHub 後，請將 example.github.io 替換為您的實際網址） -->
+  <link rel="canonical" href="https://example.github.io/" />
+  <meta property="og:title" content="生活顧問｜BM（陳聯鎂）" />
+  <meta property="og:description" content="BM（陳聯鎂）個人網站 - 專業生活顧問與生活諮詢師，擁有逾25年護理臨床、長照與生命關懷專業，提供有溫度的生活諮詢服務。" />
+  <meta property="og:image" content="share.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.github.io/" />
+  <meta property="og:locale" content="zh_TW" />
+
+  <!-- 網站小圖示 Favicon（使用 Emoji 設計） -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+
+  <!-- 載入 Google Fonts 繁體中文字型（Noto Sans TC & Noto Serif TC） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- 載入 Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            moss: {
+              DEFAULT: '#1E4D40',
+              light: '#2D6A59',
+              dark: '#14362D',
+            },
+            sage: {
+              DEFAULT: '#4A7C6F',
+              soft: '#EBF2F0',
+            },
+            warmbg: '#FAF8F5',
+            amberwarm: {
+              DEFAULT: '#C88A3B',
+              hover: '#B0762D',
+            },
+            ink: '#242927',
+          },
+          fontFamily: {
+            sans: ['"Noto Sans TC"', 'sans-serif'],
+            serif: ['"Noto Serif TC"', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- JSON-LD 結構化資料（Person） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "BM",
+    "alternateName": "陳聯鎂",
+    "jobTitle": "生活顧問 / 生活諮詢師",
+    "description": "擁有逾25年護理師、護理長與專科護理師臨床資歷，結合長照服務與生命關懷專業，提供一對一生活諮詢服務。",
+    "url": "https://example.github.io/",
+    "email": "mailto:lainmg68@gmail.com",
+    "knowsAbout": [
+      "生活諮詢",
+      "臨床護理",
+      "長期照護",
+      "生命關懷",
+      "心靈導引"
+    ]
+  }
+  </script>
+
+  <style>
+    /* 確保全站字級清晰易讀，避免手機版 375px 出現水平捲動 */
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+      font-size: 16px;
+      color: #242927;
+      background-color: #FAF8F5;
+    }
+
+    /* 圖片統一裁切不變形 */
+    .img-cover {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased selection:bg-moss selection:text-white">
+
+  <!-- ==================== 1. 導覽列 ==================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200/80 shadow-sm">
+    <nav class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="主導覽列">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <!-- 網站名稱與文字頭像 -->
+        <a href="#top" class="flex items-center gap-3 group focus:outline-none">
+          <span class="w-10 h-10 rounded-full bg-moss text-white font-serif font-bold text-lg flex items-center justify-center shadow-sm group-hover:bg-moss-light transition-colors">
+            B
+          </span>
+          <div class="flex flex-col">
+            <span class="font-serif font-bold text-xl tracking-wide text-moss">BM</span>
+            <span class="text-xs text-stone-500">生活顧問・生活諮詢</span>
+          </div>
+        </a>
+
+        <!-- 桌面版選單（依資料表 3-1 區塊順序排列） -->
+        <div class="hidden md:flex items-center space-x-2">
+          <a href="#portfolio" class="px-4 py-2.5 rounded-xl text-base font-medium text-stone-700 hover:text-moss hover:bg-sage-soft transition-colors">
+            作品集
+          </a>
+          <a href="#knowledge" class="px-4 py-2.5 rounded-xl text-base font-medium text-stone-700 hover:text-moss hover:bg-sage-soft transition-colors">
+            專業知識
+          </a>
+          <a href="#services" class="px-4 py-2.5 rounded-xl text-base font-medium text-stone-700 hover:text-moss hover:bg-sage-soft transition-colors">
+            服務項目
+          </a>
+          <a href="#contact" class="ml-2 px-5 py-2.5 rounded-xl text-base font-medium bg-moss text-white hover:bg-moss-light transition-colors shadow-sm">
+            聯絡我
+          </a>
+        </div>
+
+        <!-- 手機版漢堡選單按鈕 ☰ -->
+        <div class="md:hidden">
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="開啟主選單"
+            class="inline-flex items-center justify-center w-12 h-12 rounded-xl text-moss hover:bg-sage-soft focus:outline-none focus:ring-2 focus:ring-moss transition-colors"
+          >
+            <!-- 漢堡圖示 SVG -->
+            <svg id="icon-open" class="w-7 h-7 block" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!-- 關閉圖示 SVG -->
+            <svg id="icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- 手機版展開選單 -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4 pt-2 border-t border-stone-100 space-y-1">
+        <a href="#portfolio" class="mobile-nav-link block px-4 py-3.5 rounded-xl text-base font-medium text-stone-700 hover:bg-sage-soft hover:text-moss">
+          作品集
+        </a>
+        <a href="#knowledge" class="mobile-nav-link block px-4 py-3.5 rounded-xl text-base font-medium text-stone-700 hover:bg-sage-soft hover:text-moss">
+          專業知識
+        </a>
+        <a href="#services" class="mobile-nav-link block px-4 py-3.5 rounded-xl text-base font-medium text-stone-700 hover:bg-sage-soft hover:text-moss">
+          服務項目
+        </a>
+        <a href="#contact" class="mobile-nav-link block px-4 py-3.5 rounded-xl text-base font-semibold text-moss bg-sage-soft/70 hover:bg-sage-soft">
+          聯絡我
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ==================== 2. 開場（Hero） ==================== -->
+    <section class="relative overflow-hidden bg-moss-dark text-white">
+      <!-- 開場背景大圖（優先讀取 hero.jpg，失敗時自動改用暫代圖） -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="hero.jpg"
+          alt="沉穩溫暖的生活諮詢空間背景"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://picsum.photos/seed/bm-counseling-hero/1600/900';"
+          class="img-cover opacity-35"
+        />
+        <!-- 柔和深苔綠漸層遮罩，確保文字高度清晰 -->
+        <div class="absolute inset-0 bg-gradient-to-br from-moss-dark/95 via-moss/90 to-moss-light/85"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
+        <div class="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
+          <!-- 文字頭像（資料表未提供個人照，使用名字第一個字 B） -->
+          <div class="shrink-0">
+            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-white/15 backdrop-blur-md border-2 border-white/30 flex flex-col items-center justify-center shadow-xl">
+              <span class="font-serif text-5xl sm:text-6xl font-bold text-white tracking-wider">B</span>
+              <span class="text-xs tracking-widest text-emerald-100 mt-1">BM 顧問</span>
+            </div>
+          </div>
+
+          <!-- 開場文字與行動按鈕 -->
+          <div class="text-center md:text-left flex-1">
+            <!-- 三個代表關鍵字（頓號分開） -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/25 text-emerald-50 text-sm sm:text-base font-medium mb-5">
+              <span>🌿</span>
+              <span>生活諮詢、護理底蘊、心靈導引</span>
+            </div>
+
+            <!-- 全站唯一 H1：名字 -->
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-4">
+              BM
+              <span class="block sm:inline sm:ml-3 text-xl sm:text-2xl font-sans font-normal text-emerald-100">
+                生活顧問・生活諮詢師
+              </span>
+            </h1>
+
+            <!-- 主標語 -->
+            <p class="text-xl sm:text-2xl font-medium text-amber-100 leading-relaxed mb-4">
+              結合二十五年臨床護理與生命服務歷練，陪你在人生轉折處釐清思緒、安頓身心。
+            </p>
+
+            <!-- 開場簡介（50 字內精煉摘要） -->
+            <p class="text-base sm:text-lg text-emerald-50/90 leading-relaxed max-w-2xl mx-auto md:mx-0 mb-8">
+              擁有逾25年護理師、護理長與專科護理師資歷，結合長照與生命禮儀專業，提供有溫度的生活諮詢。
+            </p>
+
+            <!-- 行動按鈕 CTA（資料表 1-3 指定希望訪客「看我作品」） -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-4">
+              <a
+                href="#portfolio"
+                class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-amberwarm hover:bg-amberwarm-hover text-white font-bold text-base sm:text-lg shadow-lg transition-all"
+              >
+                <span>看我的作品</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </a>
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl bg-white/15 hover:bg-white/25 text-white border border-white/30 font-medium text-base sm:text-lg transition-all"
+              >
+                <span>聯絡與預約諮詢</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. 區塊一：作品集（3-1 第一順位） ==================== -->
+    <section id="portfolio" class="py-16 sm:py-24 bg-warmbg">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 區塊標題 -->
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <span class="inline-block text-sm font-bold tracking-wider uppercase text-sage bg-sage-soft px-4 py-1.5 rounded-full mb-3">
+            PORTFOLIO &amp; PRACTICE
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-moss mb-4">
+            作品集與諮詢實務
+          </h2>
+          <p class="text-base sm:text-lg text-stone-600 leading-relaxed">
+            將多年臨床照護與生命服務經驗轉化為實際陪伴，協助每一位來訪者在日常困境中梳理頭緒。
+          </p>
+        </div>
+
+        <!-- 作品卡片（依資料表 4-5 作品 1 呈現，採用左右分欄特色大卡片設計，避免單卡留白空洞） -->
+        <article class="bg-white rounded-3xl shadow-md border border-stone-200/80 overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12">
+            <!-- 作品預覽圖（優先讀取 work1.jpg，失敗時自動切換暫代圖） -->
+            <div class="lg:col-span-5 relative min-h-[240px] sm:min-h-[300px] bg-sage-soft">
+              <img
+                src="work1.jpg"
+                alt="生活諮詢實務紀錄預覽圖"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://picsum.photos/seed/bm-work1/800/600';"
+                class="img-cover"
+              />
+              <div class="absolute top-4 left-4">
+                <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-moss/90 text-white text-sm font-medium backdrop-blur-sm shadow">
+                  <span>🌱</span>
+                  <span>生活諮詢</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- 作品詳細內容（照資料表「為什麼做 → 我負責什麼 → 結果 → 工具」呈現） -->
+            <div class="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+              <div>
+                <div class="text-sm font-semibold text-amberwarm mb-1">
+                  實務專案 01
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-3">
+                  身心安頓與生活諮詢實務
+                </h3>
+                <p class="text-base sm:text-lg font-medium text-moss mb-6 leading-relaxed">
+                  運用多年醫療照護與傾聽經驗，協助個案梳理日常困擾與心理壓力。
+                </p>
+
+                <div class="space-y-4 text-base text-stone-700 leading-relaxed border-t border-stone-100 pt-5">
+                  <div>
+                    <span class="font-bold text-ink block sm:inline">📌 為什麼做：</span>
+                    <span>面對生活變動、照顧壓力或人生迷惘時，人們往往需要一個具備專業同理心且客觀的傾聽與諮詢空間。</span>
+                  </div>
+                  <div>
+                    <span class="font-bold text-ink block sm:inline">🤝 我負責什麼：</span>
+                    <span>生活諮詢 — 提供一對一深度傾聽、現況問題梳理與日常步調調整引導。</span>
+                  </div>
+                  <div>
+                    <span class="font-bold text-ink block sm:inline">✨ 實務成果：</span>
+                    <span>陪伴諮詢對象在紛亂的情緒與生活課題中，重新建立穩定的心理秩序與可行方向。</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 使用的工具標籤 -->
+              <div class="mt-7 pt-5 border-t border-stone-100 flex flex-wrap items-center gap-2">
+                <span class="text-sm font-semibold text-stone-500 mr-1">運用方法與工具：</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-sage-soft text-moss text-sm font-medium">深度傾聽溝通</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-sage-soft text-moss text-sm font-medium">全人照護視角</span>
+                <span class="px-3.5 py-1.5 rounded-xl bg-sage-soft text-moss text-sm font-medium">AI 輔助筆記整理</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== 圖片橫幅分隔帶（大字引言） ==================== -->
+    <section aria-label="核心理念引言" class="relative py-16 sm:py-20 bg-moss text-white overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="about.jpg"
+          alt="專業持續精進與生命關懷意象橫幅"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='https://picsum.photos/seed/bm-banner-calm/1400/450';"
+          class="img-cover opacity-25"
+        />
+        <div class="absolute inset-0 bg-moss/85"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <span class="text-3xl sm:text-4xl block mb-4" aria-hidden="true">❝</span>
+        <blockquote class="font-serif text-xl sm:text-2xl lg:text-3xl font-semibold leading-relaxed text-white mb-4">
+          專業能力需要隨著時代與工作需求持續精進，在傾聽與陪伴中看見生命的韌性。
+        </blockquote>
+        <p class="text-base text-emerald-100">
+          —— BM（陳聯鎂）・逾 25 年臨床護理與生命服務沉淀
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== 4. 區塊二：專業知識（3-1 第二順位，第 12 點要求） ==================== -->
+    <section id="knowledge" class="py-16 sm:py-24 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 區塊標題（7-1 與 7-2） -->
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <span class="inline-block text-sm font-bold tracking-wider uppercase text-moss bg-sage-soft px-4 py-1.5 rounded-full mb-3">
+            KNOWLEDGE &amp; INSIGHTS
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-moss mb-4">
+            生活與心識諮詢筆記
+          </h2>
+          <p class="text-base sm:text-lg text-stone-600 leading-relaxed">
+            結合二十五年護理臨床、長照與生命關懷視角，整理日常最常被問到的身心安頓問題。
+          </p>
+        </div>
+
+        <!-- 知識文章卡片網格（手機 375px 單欄，電腦三欄；因第 7 部分具體文章尚未撰寫，以主題題庫卡片呈現並標示撰寫中，不連到不存在的檔案） -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <!-- 知識主題卡片 1 -->
+          <article class="flex flex-col justify-between bg-warmbg rounded-3xl p-6 sm:p-7 border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="text-2xl" aria-hidden="true">🩺</span>
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-semibold">
+                  主題規劃・即將發布
+                </span>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-ink leading-snug mb-3">
+                面對家庭長照與照顧壓力，照顧者如何先安頓自己？
+              </h3>
+              <p class="text-base text-stone-600 leading-relaxed mb-6">
+                從護理與長照服務實務出發，陪伴照顧者辨識身心耗竭的訊號，在繁重責任中留出喘息空間。
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-200/70 flex items-center justify-between">
+              <span class="text-sm text-stone-500">分類：長照與生活調適</span>
+              <a href="#contact" class="text-base font-semibold text-moss hover:text-amberwarm transition-colors">
+                來信討論 →
+              </a>
+            </div>
+          </article>
+
+          <!-- 知識主題卡片 2 -->
+          <article class="flex flex-col justify-between bg-warmbg rounded-3xl p-6 sm:p-7 border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="text-2xl" aria-hidden="true">🧭</span>
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-semibold">
+                  主題規劃・即將發布
+                </span>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-ink leading-snug mb-3">
+                人生遇到迷惘或轉折時，生活諮詢能如何幫你釐清方向？
+              </h3>
+              <p class="text-base text-stone-600 leading-relaxed mb-6">
+                透過有結構的傾聽與對話，把腦中糾結的情緒與未知擔憂拆解成具體、可執行的日常步驟。
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-200/70 flex items-center justify-between">
+              <span class="text-sm text-stone-500">分類：生活諮詢實務</span>
+              <a href="#contact" class="text-base font-semibold text-moss hover:text-amberwarm transition-colors">
+                來信討論 →
+              </a>
+            </div>
+          </article>
+
+          <!-- 知識主題卡片 3 -->
+          <article class="flex flex-col justify-between bg-warmbg rounded-3xl p-6 sm:p-7 border border-stone-200/80 shadow-sm hover:shadow-md transition-shadow">
+            <div>
+              <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="text-2xl" aria-hidden="true">🕊️</span>
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-semibold">
+                  主題規劃・即將發布
+                </span>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-ink leading-snug mb-3">
+                從醫療照護到生命禮儀：如何陪伴親友走過生命低谷？
+              </h3>
+              <p class="text-base text-stone-600 leading-relaxed mb-6">
+                結合臨床護理與喪禮服務專業，分享在面對失落與悲傷時，既能真誠陪伴又不致過度消耗的界線。
+              </p>
+            </div>
+            <div class="pt-4 border-t border-stone-200/70 flex items-center justify-between">
+              <span class="text-sm text-stone-500">分類：生命關懷筆記</span>
+              <a href="#contact" class="text-base font-semibold text-moss hover:text-amberwarm transition-colors">
+                來信討論 →
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. 區塊三：服務項目（3-1 第三順位） ==================== -->
+    <section id="services" class="py-16 sm:py-24 bg-warmbg border-t border-stone-200/60">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- 區塊標題 -->
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <span class="inline-block text-sm font-bold tracking-wider uppercase text-sage bg-sage-soft px-4 py-1.5 rounded-full mb-3">
+            SERVICES &amp; CREDENTIALS
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-moss mb-4">
+            服務項目與專業背景
+          </h2>
+          <p class="text-base sm:text-lg text-stone-600 leading-relaxed">
+            以二十五年醫療臨床與跨領域專業為後盾，提供真誠、穩重且貼近生活的一對一諮詢陪伴。
+          </p>
+        </div>
+
+        <!-- 左右雙欄：左側為服務項目（資料表 4-6），右側為真實專業資歷與證照底蘊（資料表 2-6 與 4-7） -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- 左側：主要服務項目卡片（資料表 4-6 服務 1） -->
+          <div class="lg:col-span-6 bg-white rounded-3xl p-7 sm:p-9 shadow-md border border-stone-200/80 flex flex-col justify-between">
+            <div>
+              <div class="w-14 h-14 rounded-2xl bg-moss text-white flex items-center justify-center text-2xl mb-6 shadow-sm">
+                🌿
+              </div>
+              <div class="inline-block px-3.5 py-1 rounded-full bg-sage-soft text-moss text-sm font-semibold mb-3">
+                核心服務・適合所有人
+              </div>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-ink mb-4">
+                一對一生活諮詢
+              </h3>
+              <p class="text-base sm:text-lg text-stone-700 leading-relaxed mb-6">
+                無論你正處於職場轉換、家庭照顧壓力、人際迷惘或日常情緒需要出口，我都願意以不帶批判的專業視角傾聽你，陪你一起把混亂的生活理出頭緒。
+              </p>
+
+              <ul class="space-y-3.5 text-base text-stone-700 bg-warmbg p-5 rounded-2xl border border-stone-200/60">
+                <li class="flex items-start gap-3">
+                  <span class="text-moss font-bold mt-0.5">✓</span>
+                  <span><strong>適合對象：</strong>所有人（需要傾聽、生活方向梳理與心理支持者）</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-moss font-bold mt-0.5">✓</span>
+                  <span><strong>服務內容：</strong>生活諮詢、日常壓力調適與全人關懷對話</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="text-moss font-bold mt-0.5">✓</span>
+                  <span><strong>預約方式：</strong>採預約制，請透過下方 Email 聯繫洽談時段</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8">
+              <a
+                href="#contact"
+                class="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-moss hover:bg-moss-light text-white font-bold text-base sm:text-lg transition-colors shadow-sm"
+              >
+                <span>預約生活諮詢</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 右側：專業資歷與證照訓練（完全來自資料表 2-6、4-7、4-9、4-10 真實紀錄） -->
+          <div class="lg:col-span-6 bg-moss-dark text-white rounded-3xl p-7 sm:p-9 shadow-md flex flex-col justify-between">
+            <div>
+              <h3 class="font-serif text-2xl font-bold text-amber-200 mb-6 flex items-center gap-2.5">
+                <span>🏅</span>
+                <span>專業資歷與跨領域底蘊</span>
+              </h3>
+
+              <div class="space-y-5 text-base text-emerald-50/95 leading-relaxed">
+                <div class="bg-white/10 rounded-2xl p-4 sm:p-5 border border-white/15">
+                  <h4 class="font-bold text-white text-lg mb-1.5">
+                    逾 25 年臨床護理與管理歷練
+                  </h4>
+                  <p class="text-emerald-100/90 text-base">
+                    自 1994 年起歷任護理師、護理長及專科護理師，累計服務年資達 25 年 04 個月，具備深厚的醫療照護與緊急應變實務經驗。
+                  </p>
+                </div>
+
+                <div class="bg-white/10 rounded-2xl p-4 sm:p-5 border border-white/15">
+                  <h4 class="font-bold text-white text-lg mb-1.5">
+                    國家證照與生命關懷專業訓練
+                  </h4>
+                  <p class="text-emerald-100/90 text-base">
+                    持有高考護理師、普考護士、普考助產士證照，具備長照服務人員證明、喪禮服務丙級技術士證，並曾進修社會工作師學分班。
+                  </p>
+                </div>
+
+                <div class="bg-white/10 rounded-2xl p-4 sm:p-5 border border-white/15">
+                  <h4 class="font-bold text-white text-lg mb-1.5">
+                    靜心涵養與持續學習
+                  </h4>
+                  <p class="text-emerald-100/90 text-base">
+                    日常透過靜坐、閱讀、記事、畫畫、宗教禮儀與音樂沉澱心靈；近年積極學習 AI 應用（短劇、寫作、作詞），持續朝心靈導師與心識諮詢師邁進。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 6. 聯絡方式（第 0 部分規定必有區塊） ==================== -->
+    <section id="contact" class="py-16 sm:py-24 bg-white border-t border-stone-200/80">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-sage-soft/70 rounded-3xl p-8 sm:p-12 border border-sage/20 text-center shadow-sm">
+          <span class="inline-block text-sm font-bold tracking-wider uppercase text-moss bg-white px-4 py-1.5 rounded-full mb-4 shadow-xs">
+            CONTACT ME
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-moss mb-4">
+            聯絡與諮詢預約
+          </h2>
+          <p class="text-base sm:text-lg text-stone-700 leading-relaxed max-w-xl mx-auto mb-8">
+            想預約生活諮詢或進一步交流？歡迎隨時透過電子郵件與我聯繫，我會盡快回覆您。
+          </p>
+
+          <!-- 聯絡資訊卡片（僅放資料表 4-12 填寫的公開 Email 與 Facebook 名稱） -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 max-w-2xl mx-auto mb-6">
+            <!-- 寫信按鈕 -->
+            <a
+              href="mailto:lainmg68@gmail.com"
+              class="flex-1 inline-flex items-center justify-center gap-3 px-6 py-4 rounded-2xl bg-moss hover:bg-moss-light text-white font-bold text-base sm:text-lg shadow-md transition-colors"
+            >
+              <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span>寫信給 BM</span>
+            </a>
+
+            <!-- 一鍵複製 Email 按鈕 -->
+            <button
+              type="button"
+              id="copy-email-btn"
+              onclick="copyEmailAddress()"
+              class="flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-white hover:bg-stone-50 text-ink border border-stone-300 font-semibold text-base sm:text-lg transition-colors"
+            >
+              <span>📋</span>
+              <span id="copy-btn-text">lainmg68@gmail.com</span>
+            </button>
+          </div>
+
+          <!-- 複製成功提示訊息（不使用 alert） -->
+          <p id="copy-feedback" role="status" class="text-sm font-semibold text-moss h-6 mb-4"></p>
+
+          <!-- Facebook 資訊（依資料表 4-12 顯示帳號名稱 BM，不編造外部網址） -->
+          <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/90 border border-stone-200 text-stone-700 text-base">
+            <span class="font-bold text-blue-700">Facebook</span>
+            <span class="text-stone-400">|</span>
+            <span>搜尋帳號名稱：<strong>BM</strong></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== 7. 頁尾 ==================== -->
+  <footer class="bg-moss-dark text-emerald-100/80 py-10 border-t border-white/10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div>
+        <p class="font-serif font-bold text-lg text-white">BM（陳聯鎂）生活顧問</p>
+        <p class="text-sm mt-1">生活諮詢・護理底蘊・心靈導引</p>
+      </div>
+      <p class="text-sm">
+        &copy; 2026 BM（陳聯鎂）. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- 輕量互動腳本：手機版漢堡選單與一鍵複製信箱 -->
+  <script>
+    // 手機版漢堡選單切換
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        if (isHidden) {
+          mobileMenu.classList.remove('hidden');
+          iconOpen.classList.add('hidden');
+          iconClose.classList.remove('hidden');
+          menuBtn.setAttribute('aria-expanded', 'true');
+        } else {
+          mobileMenu.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // 點擊手機版選單連結後自動收合
+      mobileLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // 一鍵複製 Email（使用 execCommand 確保在各種嵌入環境皆能正常運作）
+    function copyEmailAddress() {
+      const email = 'lainmg68@gmail.com';
+      const feedback = document.getElementById('copy-feedback');
+      const tempInput = document.createElement('textarea');
+      tempInput.value = email;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        if (feedback) {
+          feedback.textContent = '✓ 已複製信箱地址：lainmg68@gmail.com';
+          setTimeout(() => {
+            feedback.textContent = '';
+          }, 3500);
+        }
+      } catch (err) {
+        if (feedback) {
+          feedback.textContent = '請手動複製信箱：lainmg68@gmail.com';
+        }
+      }
+      document.body.removeChild(tempInput);
+    }
+  </script>
+</body>
+</html>
